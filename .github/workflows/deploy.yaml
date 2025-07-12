@@ -30,6 +30,7 @@ jobs:
         | docker login --username AWS --password-stdin $ECR_REGISTRY
 
     - name: Build and push Docker image
+      working-directory: ./nodejs-app
       run: |
         docker build -t $ECR_REPOSITORY .
         docker tag $ECR_REPOSITORY:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
