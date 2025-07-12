@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello from Node.js on EKS with ECR!');
+  res.send("✅ Auto-deployed from GitHub Actions to EKS!");
 });
 
 const port = 3000;
